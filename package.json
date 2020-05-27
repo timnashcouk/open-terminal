@@ -1,0 +1,35 @@
+{
+	"name": "local-addon-open-terminal",
+	"productName": "Open iTerm",
+	"version": "1.0.0",
+	"description": "Open a iTerm Session to current web root",
+	"renderer": "lib/renderer.js",
+	"main": "lib/main.js",
+	"icon": "logo.png",
+	"bgColor": "#eff5fb",
+	"author": "Tim Nash <tim@timnash.co.uk>",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc",
+		"watch": "yarn run build --watch",
+		"prepare": "npm run build"
+	},
+	"devDependencies": {
+		"@getflywheel/local": "^5.2.1",
+		"@types/electron": "^1.6.10",
+		"@types/jsdom": "^12.2.4",
+		"typescript": "^3.7.5"
+	},
+	"dependencies": {
+		"@getflywheel/local-components": "^12.1.0",
+		"jsdom": "^16.0.1",
+		"react": "^16.12.0"
+	},
+	"bundledDependencies": [
+		"@getflywheel/local-components",
+		"jsdom"
+	],
+	"engines": {
+		"local-by-flywheel": "^5.2.0"
+	}
+}
